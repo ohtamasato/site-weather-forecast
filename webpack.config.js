@@ -1,13 +1,14 @@
 const debug   = process.env.NODE_ENV !== "production";
 const webpack = require('webpack');
 const path    = require('path');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
     context: path.join(__dirname, "src"),
-    entry: "./js/app.js",
+    entry: "./js/app.tsx",
     module: {
         rules: [{
-            test: /\.jsx?$/,
+            test: /\.tsx?$/,
             exclude: /(node_modules|bower_components)/,
             use: [{
                 loader: 'babel-loader',
@@ -20,6 +21,10 @@ module.exports = {
     output: {
         path: __dirname + "/src/www/",
         filename: "js/app.min.js"
+    },
+    resolve: {
+        extensions: ['.js', '.ts', '.tsx'],
+        plugins: [new TsconfigPathsPlugin({ configFile: "./src/www/js/tsconfig.json" })]
     },
     plugins: debug ? [] : [
         new webpack.optimize.OccurrenceOrderPlugin(),
