@@ -1,2 +1,5 @@
 # IDE project directory
 .idea
+
+# Libraries
+node_modules
