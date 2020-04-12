@@ -16,3 +16,5 @@ webpack --mode development
 
 ## Review
 We have all web site files in `src`.
+
+Web root should be `src/www`.
