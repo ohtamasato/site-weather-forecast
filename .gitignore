@@ -1,0 +1,13 @@
+# Cache files
+.DS_Store
+
+# IDE project directory
+.idea
+
+# Libraries
+node_modules
+
+# Built files
+#
+# Below files should be newly built everytime you checkout.
+src/www/js/app.min.js
