@@ -5,7 +5,7 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
     context: path.join(__dirname, "src"),
-    entry: "./js/app.tsx",
+    entry: "./js/script.tsx",
     module: {
         rules: [{
             test: /\.tsx?$/,
