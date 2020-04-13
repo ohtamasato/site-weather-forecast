@@ -3,6 +3,10 @@ const webpack = require('webpack');
 const path    = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
+const srcPath = (subdir) => {
+    return path.join(__dirname, "src", "js", subdir)
+}
+
 module.exports = {
     context: path.join(__dirname, "src"),
     entry: "./js/script.tsx",
@@ -23,6 +27,9 @@ module.exports = {
         filename: "js/app.min.js"
     },
     resolve: {
+        alias: {
+            components: srcPath('components'),
+        },
         extensions: ['.js', '.ts', '.tsx'],
         plugins: [new TsconfigPathsPlugin({ configFile: "./src/www/js/tsconfig.json" })]
     },
