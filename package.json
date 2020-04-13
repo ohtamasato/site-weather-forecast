@@ -17,16 +17,23 @@
   },
   "homepage": "https://github.com/ohtamasato/site-weather-forecast#readme",
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "@babel/preset-react": "^7.9.4",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "@types/react-router": "^5.1.5",
+    "@types/react-router-dom": "^5.1.4",
     "babel-loader": "^8.1.0",
+    "prettier": "2.0.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2",
+    "ts-loader": "^6.2.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.3.0",
     "typescript": "^3.8.3",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
-  }
+  },
+  "dependencies": {}
 }
