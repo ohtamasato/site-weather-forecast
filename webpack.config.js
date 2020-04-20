@@ -23,6 +23,9 @@ module.exports = {
     resolve: {
         alias: {
             components: srcPath('components'),
+            models: srcPath('models'),
+            reducers: srcPath('reducers'),
+            store: srcPath('store')
         },
         extensions: ['.js', '.ts', '.tsx']
     },

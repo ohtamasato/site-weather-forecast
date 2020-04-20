@@ -1,12 +1,12 @@
 import * as React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router'
 import Index from "components/Index"
-import Forecast from "components/Forecast"
+import Forecast from "components/forecast"
 import Dependencies from "components/Dependencies"
 
 export default () => {
     return (
-        <Router>
+        <Switch>
             <Route
                 exact={true}
                 path="/weather"
@@ -21,6 +21,6 @@ export default () => {
                 path="/weather/dependencies"
                 component={Dependencies}
             />
-        </Router>
+        </Switch>
     )
 }

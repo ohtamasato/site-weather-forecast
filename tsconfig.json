@@ -16,7 +16,10 @@
     "noUnusedLocals": true,
     "baseUrl": "./",
     "paths": {
-      "components/*": ["components/*"]
+      "components/*": ["components/*"],
+      "models/*": ["models/*"],
+      "reducers/*": ["reducers/*"],
+      "store/*": ["store/*"]
     }
   },
   "exclude": [

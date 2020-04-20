@@ -1,7 +1,16 @@
 import * as React from 'react'
+import { Geograph } from 'models/geograph'
+import { RouteComponentProps } from 'react-router'
 
-export default (props: any) => {
-    const day = props && props.match && props.match.params && props.match.params.day ? props.match.params.day : null
+interface Props {
+    routeProps: RouteComponentProps<any>
+    geograph: Geograph | null
+}
+
+export default (props: Props) => {
+    const day = props.routeProps && props.routeProps.match && props.routeProps.match.params && props.routeProps.match.params.day ? props.routeProps.match.params.day : null
+
+    console.log("geo_location: ", props)
 
     return (
         day === "today" ? (
